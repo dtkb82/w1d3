@@ -1,6 +1,6 @@
-function countLetters(word) {
+ //counting number of times each character appears in a string
 
-    var removeSpace = word.replace(/\s/g, '');
+ var removeSpace = word.replace(/\s/g, '');
     console.log(removeSpace);
 
     var letterCount = {};
