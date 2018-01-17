@@ -1,11 +1,21 @@
-//var word = process.argv.slice(2);
-// var someString = "lighthouse labs";
-// var letters = someString.split("")
-// console.log(letters);
+function countLetters(word) {
 
-function countLetters (word) {
-	var noSpace = word.replace(/\s/g, '');
- console.log(noSpace);
- }
+    var removeSpace = word.replace(/\s/g, '');
+    console.log(removeSpace);
 
- countLetters("light house");
+    var letterCount = {};
+
+    for (var i = 0; i < removeSpace.length; i++) {
+        
+        var charIndex = removeSpace.charAt(i);
+
+        if (letterCount[charIndex]) {
+            letterCount[charIndex]++;
+        } else {
+            letterCount[charIndex] = 1;
+        }
+    }
+    console.log(letterCount);
+}
+
+countLetters('light house happy blah');
